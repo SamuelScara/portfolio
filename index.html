@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-<html lang="it" data-theme="carta">
+<html lang="en" data-theme="carta">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Samuel Scarabottolo — Full Stack Developer</title>
-<meta name="description" content="Portfolio di Samuel Scarabottolo, full-stack developer specializzato in backend Python/FastAPI, frontend Angular e assistenti RAG per la pubblica amministrazione.">
+<title data-i18n="meta.title">Samuel Scarabottolo — Full Stack Developer</title>
+<meta name="description" data-i18n-attr="content" content="Portfolio of Samuel Scarabottolo, full-stack developer specialising in Python/FastAPI backends, Angular frontends and RAG assistants for public administration.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,340;0,9..144,460;0,9..144,560;0,9..144,650;1,9..144,440;1,9..144,560&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
- 
+
 <div id="cursorGlow" aria-hidden="true"></div>
 <canvas id="bgCanvas" aria-hidden="true"></canvas>
 <svg id="grain" aria-hidden="true">
@@ -21,44 +21,50 @@
   </filter>
   <rect width="100%" height="100%" filter="url(#grainFilter)"/>
 </svg>
- 
-<a class="skip-link" href="#main">Salta al contenuto</a>
- 
+
+<a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
+
 <header>
   <div class="wrap nav-inner">
     <a class="brand" href="#top">
       <span class="brand-mark">SS</span>
       <span class="brand-name">Samuel Scarabottolo</span>
     </a>
-    <button class="menu-btn" id="menuBtn" aria-label="Apri il menu" aria-expanded="false">
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" data-i18n-attr="aria-label" data-i18n="nav.menuAria">
       <span></span><span></span><span></span>
     </button>
     <nav class="primary-nav" id="primaryNav">
       <ul>
-        <li><a href="#about" data-nav>Chi sono</a></li>
-        <li><a href="#esperienza" data-nav>Esperienza</a></li>
-        <li><a href="#competenze" data-nav>Competenze</a></li>
-        <li><a href="#percorso" data-nav>Percorso</a></li>
-        <li><a href="#contatti" class="nav-cta">Contattami</a></li>
+        <li><a href="#about" data-nav data-i18n="nav.about">About</a></li>
+        <li><a href="#esperienza" data-nav data-i18n="nav.experience">Experience</a></li>
+        <li><a href="#competenze" data-nav data-i18n="nav.skills">Skills</a></li>
+        <li><a href="#percorso" data-nav data-i18n="nav.education">Education</a></li>
+        <li><a href="#contatti" class="nav-cta" data-i18n="nav.contact">Contact me</a></li>
         <li>
-          <div class="theme-switch" role="group" aria-label="Scegli il tema">
-            <button class="theme-btn" data-t="carta" aria-pressed="true" aria-label="Tema Carta (chiaro)" title="Carta"></button>
-            <button class="theme-btn" data-t="inchiostro" aria-pressed="false" aria-label="Tema Inchiostro (scuro)" title="Inchiostro"></button>
-            <button class="theme-btn" data-t="pergamena" aria-pressed="false" aria-label="Tema Pergamena (seppia)" title="Pergamena"></button>
+          <div class="lang-switch" role="group" aria-label="Choose language">
+            <button class="lang-btn" data-lang="en" aria-pressed="true">EN</button>
+            <button class="lang-btn" data-lang="it" aria-pressed="false">IT</button>
+          </div>
+        </li>
+        <li>
+          <div class="theme-switch" role="group" aria-label="Choose theme">
+            <button class="theme-btn" data-t="carta" aria-pressed="true" aria-label="Paper theme (light)" data-i18n-attr="aria-label" data-i18n="theme.cartaAria" title="Carta"></button>
+            <button class="theme-btn" data-t="inchiostro" aria-pressed="false" aria-label="Ink theme (dark)" data-i18n-attr="aria-label" data-i18n="theme.inchiostroAria" title="Inchiostro"></button>
+            <button class="theme-btn" data-t="pergamena" aria-pressed="false" aria-label="Parchment theme (sepia)" data-i18n-attr="aria-label" data-i18n="theme.pergamenaAria" title="Pergamena"></button>
           </div>
         </li>
       </ul>
     </nav>
   </div>
 </header>
- 
+
 <main id="main">
- 
+
   <section class="hero" id="top">
     <div class="wrap hero-grid">
       <div>
-        <h1>Costruisco assistenti che leggono i documenti pubblici al posto delle persone.</h1>
-        <p class="lede">Full-stack developer con oltre due anni di esperienza: backend in Python e FastAPI, frontend in Angular, e sistemi RAG usati ogni giorno da enti pubblici italiani.</p>
+        <h1 data-i18n="hero.h1">I build assistants that read public-sector documents so people don't have to.</h1>
+        <p class="lede" data-i18n="hero.lede">Full-stack developer with over two years of experience: Python and FastAPI on the backend, Angular on the frontend, and RAG systems used daily by Italian public authorities.</p>
         <div class="hero-tags">
           <span class="tag rose">FastAPI</span>
           <span class="tag">Angular</span>
@@ -67,156 +73,171 @@
           <span class="tag">Python</span>
         </div>
         <div class="hero-actions">
-          <a class="btn primary" href="#esperienza">Guarda i progetti</a>
-          <a class="btn ghost" href="#contatti">Scrivimi</a>
+          <a class="btn primary" href="#esperienza" data-i18n="hero.btnProjects">See the projects</a>
+          <a class="btn ghost" href="#contatti" data-i18n="hero.btnContact">Get in touch</a>
         </div>
         <a class="scroll-cue" href="#about">
-          <span>Scorri per saperne di più</span>
+          <span data-i18n="hero.scroll">Scroll to learn more</span>
           <span class="arrow">↓</span>
         </a>
       </div>
- 
-      <svg class="pipeline" viewBox="0 0 560 130" role="img" aria-label="Diagramma: un documento viene estratto, indicizzato e trasformato in una risposta">
+
+      <svg class="pipeline" viewBox="0 0 560 130" role="img" aria-label="Diagram: a document is extracted, indexed and turned into an answer" data-i18n-attr="aria-label" data-i18n="pipeline.aria">
         <line class="link" x1="40" y1="60" x2="200" y2="60"/>
         <line class="link" x1="200" y1="60" x2="360" y2="60"/>
         <line class="link" x1="360" y1="60" x2="520" y2="60"/>
- 
+
         <circle class="node accent" cx="40" cy="60" r="21"/>
         <circle class="node" cx="200" cy="60" r="21"/>
         <circle class="node" cx="360" cy="60" r="21"/>
         <circle class="node accent" cx="520" cy="60" r="21"/>
- 
+
         <path d="M32,52 h16 v16 h-16 z M32,56 h16 M32,60 h11 M32,64 h16" fill="none" stroke="var(--carmine)" stroke-width="1.2"/>
         <path d="M192,52 a8,8 0 1,0 0.1,0" fill="none" stroke="var(--teal)" stroke-width="1.2"/>
         <path d="M355,52 h10 v10 h-10z M352,66 h16" fill="none" stroke="var(--teal)" stroke-width="1.2"/>
         <path d="M512,54 q8,-4 16,0 q0,10 -8,12 q-8,-2 -8,-12z" fill="none" stroke="var(--carmine)" stroke-width="1.2"/>
- 
-        <text class="node-label" x="40" y="100" text-anchor="middle">Documento</text>
-        <text class="node-label" x="200" y="100" text-anchor="middle">Estrazione</text>
-        <text class="node-label" x="360" y="100" text-anchor="middle">Indice</text>
-        <text class="node-label" x="520" y="100" text-anchor="middle">Risposta</text>
- 
+
+        <text class="node-label" x="40" y="100" text-anchor="middle" data-i18n="pipeline.doc">Document</text>
+        <text class="node-label" x="200" y="100" text-anchor="middle" data-i18n="pipeline.extract">Extraction</text>
+        <text class="node-label" x="360" y="100" text-anchor="middle" data-i18n="pipeline.index">Index</text>
+        <text class="node-label" x="520" y="100" text-anchor="middle" data-i18n="pipeline.answer">Answer</text>
+
         <circle class="runner" r="4"/>
       </svg>
     </div>
   </section>
- 
+
   <section id="about">
     <div class="wrap about-grid">
       <div>
-        <p class="eyebrow">Presentazione</p>
-        <h2 style="margin-bottom:1.2rem;">Dal documento alla risposta, senza far perdere tempo a nessuno</h2>
-        <p>Sviluppo applicazioni web full-stack da oltre due anni, con <strong>backend in Python (FastAPI)</strong> e <strong>frontend in Angular</strong>. La maggior parte del mio lavoro riguarda assistenti virtuali basati su sistemi RAG per la pubblica amministrazione: mi occupo di estrazione, indicizzazione e recupero dei documenti che quegli assistenti usano per rispondere.</p>
-        <p>Conosco anche Java e i fondamenti di progettazione delle API REST. Mi interessano in particolare l'AI generativa e la scrittura di codice pulito e manutenibile.</p>
+        <p class="eyebrow" data-i18n="about.eyebrow">About</p>
+        <h2 style="margin-bottom:1.2rem;" data-i18n="about.h2">From document to answer, without wasting anyone's time</h2>
+        <p data-i18n="about.p1">I've been building full-stack web applications for over two years, with <strong>backend in Python (FastAPI)</strong> and <strong>frontend in Angular</strong>. Most of my work is on RAG-based virtual assistants for public administration: I handle the extraction, indexing and retrieval of the documents those assistants rely on to answer questions.</p>
+        <p data-i18n="about.p2">I also know Java and the fundamentals of REST API design. I'm particularly interested in generative AI and in writing clean, maintainable code.</p>
       </div>
       <div class="stamp-wrap">
-        <svg class="stamp" viewBox="0 0 200 200" role="img" aria-label="Attestato: Angular Certified Developer, giugno 2024">
+        <svg class="stamp" viewBox="0 0 200 200" role="img" aria-label="Certificate: Angular Certified Developer, June 2024" data-i18n-attr="aria-label" data-i18n="stamp.aria">
           <defs>
-            <path id="circlePath" d="M 100,100 m -78,0 a 78,78 0 1,1 156,0 a 78,78 0 1,1 -156,0"/>
+            <path id="circlePath" d="M 100,100 m -80,0 a 80,80 0 1,1 160,0 a 80,80 0 1,1 -160,0"/>
           </defs>
           <circle cx="100" cy="100" r="92" fill="none" stroke="var(--carmine)" stroke-width="2"/>
-          <circle cx="100" cy="100" r="80" fill="none" stroke="var(--carmine)" stroke-width="1"/>
+          <circle cx="100" cy="100" r="68" fill="none" stroke="var(--carmine)" stroke-width="1"/>
           <text font-family="IBM Plex Sans" font-size="11.5" fill="var(--carmine)" letter-spacing="1.5">
             <textPath href="#circlePath" startOffset="4%">ANGULAR CERTIFIED DEVELOPER · ANGULAR CERTIFIED DEVELOPER ·</textPath>
           </text>
-          <path d="M75,105 l16,16 l34,-40" fill="none" stroke="var(--carmine)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
-          <text x="100" y="140" text-anchor="middle" font-family="Fraunces" font-style="italic" font-size="13" fill="var(--carmine)">Giugno 2024</text>
+          <g transform="translate(100,96) scale(0.42) translate(-65.35,-69.3)">
+            <path fill="#E23237" d="M0 23 64.5 0l66.2 22.6-10.7 85.3-55.5 30.7-54.6-30.3L0 23Z"/>
+            <path fill="#B52E31" d="M130.7 22.6 64.5 0v138.6l55.5-30.7 10.7-85.3Z"/>
+            <path fill="#FFF" d="m64.6 16.2-40.2 89.4 15-.3 8.1-20.2h35.9l8.8 20.4 14.3.3-41.9-89.6Zm.1 28.7 13.6 28.4H52.8l11.9-28.4Z"/>
+          </g>
+          <text x="100" y="140" text-anchor="middle" font-family="Fraunces" font-style="italic" font-size="13" fill="var(--carmine)" data-i18n="stamp.date">June 2024</text>
         </svg>
-        <p class="stamp-caption">Angular Basic &amp; Angular Developer, conseguite durante il progetto IVA4PA. <a href="https://certificates.dev/angular/certificates/aeb66e9d-3460-4774-acb8-2bf7eb431d42" target="_blank" rel="noopener">Vedi il certificato</a></p>
+        <p class="stamp-caption" data-i18n="stamp.caption">Angular Basic &amp; Angular Developer, earned during the IVA4PA project. <a href="https://certificates.dev/angular/certificates/aeb66e9d-3460-4774-acb8-2bf7eb431d42" target="_blank" rel="noopener">View the certificate</a></p>
       </div>
     </div>
   </section>
- 
+
   <section id="esperienza">
     <div class="wrap">
       <div class="section-head">
-        <p class="eyebrow">Esperienza lavorativa</p>
-        <h2>Due anni, quattro tappe, un filo conduttore</h2>
-        <p>Sempre in Akera S.r.l., con una parentesi di tirocinio in Siav S.p.A. durante la tesi di laurea.</p>
+        <p class="eyebrow" data-i18n="exp.eyebrow">Work experience</p>
+        <h2 data-i18n="exp.h2">Two years, five chapters, one common thread</h2>
+        <p data-i18n="exp.p">Always at Akera S.r.l., with an internship at Siav S.p.A. during my thesis.</p>
       </div>
- 
+
       <div class="timeline">
- 
+
         <div class="titem current">
           <div class="trow">
-            <h3>Full Stack Developer — NRC</h3>
-            <span class="tdate now">In corso</span>
+            <h3 data-i18n="exp.item1.role">Full Stack Developer — Appalti</h3>
+            <span class="tdate now" data-i18n="exp.status">Ongoing</span>
           </div>
-          <div class="tcompany">Akera S.r.l · Progetto per il Comune di Bologna</div>
+          <div class="tcompany" data-i18n="exp.item1.company">Akera S.r.l · Client project for Gruppo Maggioli</div>
           <ul>
-            <li><strong>MyIntranet, pubblica amministrazione:</strong> onboarding di oltre 30 clienti comunali, gestione dei ticket di assistenza e sviluppo di funzionalità personalizzate richieste da enti pubblici di diversi comuni italiani.</li>
-            <li><strong>Versionamento e collaborazione:</strong> Git con feature branch, pull request e revisione del codice in un flusso di lavoro di team.</li>
+            <li data-i18n="exp.item1.li1"><strong>Appalti (e-procurement):</strong> contributing to Maggioli Group's e-procurement platform for public tenders, working inside their Java/Maven codebase with builds hosted on Google Cloud's Artifact Registry.</li>
           </ul>
         </div>
- 
+
         <div class="titem">
           <div class="trow">
-            <h3>Full Stack Developer — IVA4PA</h3>
+            <h3 data-i18n="exp.item2.role">Full Stack Developer — NRC</h3>
+            <span class="tdate">01/2025 – 08/2026</span>
+          </div>
+          <div class="tcompany" data-i18n="exp.item2.company">Akera S.r.l · Project for the Comune di Bologna</div>
+          <ul>
+            <li data-i18n="exp.item2.li1"><strong>MyIntranet, public administration:</strong> onboarded over 30 municipal clients, resolved support tickets and built custom features requested by public bodies across several Italian municipalities.</li>
+            <li data-i18n="exp.item2.li2"><strong>Version control and collaboration:</strong> Git with feature branches, pull requests and code review in a team workflow.</li>
+          </ul>
+        </div>
+
+        <div class="titem">
+          <div class="trow">
+            <h3 data-i18n="exp.item3.role">Full Stack Developer — IVA4PA</h3>
             <span class="tdate">03/2024 – 07/2025</span>
           </div>
-          <div class="tcompany">Akera S.r.l · Progetto per il Comune di Padova</div>
+          <div class="tcompany" data-i18n="exp.item3.company">Akera S.r.l · Project for the Comune di Padova</div>
           <ul>
-            <li><strong>Virtual Assistant:</strong> chatbot RAG in produzione basato su documenti amministrativi, per ridurre le richieste manuali degli utenti.</li>
-            <li><strong>Pipeline di dati:</strong> estrazione automatizzata da Pentaho e crawling di oltre 50 portali comunali (MyPortal / Regione Veneto) con Scrapy e Selenium.</li>
-            <li><strong>API di indicizzazione:</strong> progettazione e deploy di API FastAPI per l'ingestione e il recupero dei documenti, con storage su bucket AWS S3.</li>
-            <li><strong>Front-end Angular:</strong> widget riutilizzabile per integrare l'assistente virtuale sui siti comunali di terze parti.</li>
+            <li data-i18n="exp.item3.li1"><strong>Virtual Assistant:</strong> RAG chatbot in production, built on administrative documents, to cut down manual requests from users.</li>
+            <li data-i18n="exp.item3.li2"><strong>Data pipeline:</strong> automated extraction from Pentaho and crawling of over 50 municipal portals (MyPortal / Regione Veneto) with Scrapy and Selenium.</li>
+            <li data-i18n="exp.item3.li3"><strong>Indexing API:</strong> designed and deployed FastAPI endpoints for ingesting and retrieving documents, with storage on an AWS S3 bucket.</li>
+            <li data-i18n="exp.item3.li4"><strong>Angular front-end:</strong> reusable widget to embed the virtual assistant on third-party municipal websites.</li>
           </ul>
         </div>
- 
+
         <div class="titem">
           <div class="trow">
-            <h3>Formazione aziendale</h3>
+            <h3 data-i18n="exp.item4.role">Company training</h3>
             <span class="tdate">2024</span>
           </div>
           <div class="tcompany">Akera S.r.l</div>
           <ul>
-            <li>Formazione iniziale sullo stack aziendale: <strong>Python, FastAPI, Angular, Spring Boot</strong>, workflow Git e fondamenti di metodologia Agile/SCRUM.</li>
-            <li>Conseguite le certificazioni Angular Basic e Angular Developer.</li>
+            <li data-i18n="exp.item4.li1">Initial training on the company stack: <strong>Python, FastAPI, Angular, Spring Boot</strong>, Git workflow, and Agile/SCRUM fundamentals.</li>
+            <li data-i18n="exp.item4.li2">Earned the Angular Basic and Angular Developer certifications.</li>
           </ul>
         </div>
- 
+
         <div class="titem">
           <div class="trow">
-            <h3>Assistant Research Engineer</h3>
+            <h3 data-i18n="exp.item5.role">Assistant Research Engineer</h3>
             <span class="tdate">05/2023 – 08/2023</span>
           </div>
-          <div class="tcompany">Siav S.p.A · Tirocinio tesi di laurea</div>
+          <div class="tcompany" data-i18n="exp.item5.company">Siav S.p.A · Thesis internship</div>
           <ul>
-            <li><strong>Localstore API:</strong> piattaforma di gestione della knowledge base per workflow di ricerca generativa.</li>
-            <li>Autenticazione, gestione utenti, upload dei documenti, condivisione della knowledge base ed endpoint di interrogazione.</li>
-            <li><strong>Stack:</strong> Python, FastAPI (RESTful), SQLAlchemy ORM.</li>
+            <li data-i18n="exp.item5.li1"><strong>Localstore API:</strong> knowledge-base management platform for generative research workflows.</li>
+            <li data-i18n="exp.item5.li2">Authentication, user management, document upload, knowledge-base sharing and query endpoints.</li>
+            <li data-i18n="exp.item5.li3"><strong>Stack:</strong> Python, FastAPI (RESTful), SQLAlchemy ORM.</li>
           </ul>
         </div>
- 
+
       </div>
     </div>
   </section>
- 
+
   <section id="competenze">
     <div class="wrap">
       <div class="section-head">
-        <p class="eyebrow">Competenze</p>
-        <h2>Gli strumenti che uso ogni giorno</h2>
+        <p class="eyebrow" data-i18n="skills.eyebrow">Skills</p>
+        <h2 data-i18n="skills.h2">The tools I use every day</h2>
       </div>
       <div class="skills-grid">
-        <div class="skill-card" data-tab="Frontend">
+        <div class="skill-card" data-tab="Frontend" data-i18n-tab="skills.tabFrontend">
           <div class="chip-row">
             <span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">JavaScript</span>
             <span class="chip">TypeScript</span><span class="chip">Angular</span>
           </div>
         </div>
-        <div class="skill-card" data-tab="Backend">
+        <div class="skill-card" data-tab="Backend" data-i18n-tab="skills.tabBackend">
           <div class="chip-row">
             <span class="chip">Python</span><span class="chip">Java</span>
             <span class="chip">Spring Boot</span><span class="chip">C / C++</span>
           </div>
         </div>
-        <div class="skill-card" data-tab="Sistemi &amp; dati">
+        <div class="skill-card" data-tab="Systems &amp; data" data-i18n-tab="skills.tabSystems">
           <div class="chip-row">
             <span class="chip">Windows</span><span class="chip">Linux</span><span class="chip">SQL</span>
           </div>
         </div>
-        <div class="skill-card" data-tab="Metodo">
+        <div class="skill-card" data-tab="Method" data-i18n-tab="skills.tabMethod">
           <div class="chip-row">
             <span class="chip">Git</span><span class="chip">Agile</span><span class="chip">SCRUM</span>
           </div>
@@ -224,62 +245,61 @@
       </div>
     </div>
   </section>
- 
+
   <section id="percorso">
     <div class="wrap edu-lang">
       <div>
-        <p class="eyebrow">Formazione</p>
-        <h2 style="margin-bottom:1.6rem;">Percorso di studi</h2>
+        <p class="eyebrow" data-i18n="edu.eyebrow">Education</p>
+        <h2 style="margin-bottom:1.6rem;" data-i18n="edu.h2">Academic background</h2>
         <div class="edu-item">
           <div class="tdate">10/2020 – 09/2023 · Padova</div>
-          <h3>Laurea triennale in Informatica</h3>
+          <h3 data-i18n="edu.item1.degree">Bachelor's Degree in Computer Science</h3>
           <p>Università degli Studi di Padova</p>
         </div>
         <div class="edu-item">
           <div class="tdate">09/2015 – 06/2020 · Padova</div>
-          <h3>Diploma in Informatica</h3>
+          <h3 data-i18n="edu.item2.degree">Technical Diploma in Computer Science</h3>
           <p>ITI Francesco Severi</p>
         </div>
       </div>
       <div class="lang-block">
-        <p class="eyebrow">Lingue</p>
-        <h3>Italiano</h3>
-        <p class="lang-mother">Madrelingua</p>
-        <h3>Inglese</h3>
+        <p class="eyebrow" data-i18n="langs.eyebrow">Languages</p>
+        <h3>Italian</h3>
+        <p class="lang-mother" data-i18n="langs.native">Native speaker</p>
+        <h3>English</h3>
         <div class="cefr-row">
-          <span class="cefr">Ascolto B2</span>
-          <span class="cefr">Lettura B2</span>
-          <span class="cefr">Interazione orale B2</span>
-          <span class="cefr">Produzione orale B2</span>
-          <span class="cefr">Scrittura B2</span>
+          <span class="cefr" data-i18n="cefr.listening">Listening B2</span>
+          <span class="cefr" data-i18n="cefr.reading">Reading B2</span>
+          <span class="cefr" data-i18n="cefr.spokenInteraction">Spoken interaction B2</span>
+          <span class="cefr" data-i18n="cefr.spokenProduction">Spoken production B2</span>
+          <span class="cefr" data-i18n="cefr.writing">Writing B2</span>
         </div>
       </div>
     </div>
   </section>
- 
+
   <section class="contact" id="contatti">
     <div class="wrap contact-grid">
       <div>
-        <h2>Hai un problema che assomiglia a un mucchio di documenti?</h2>
-        <p>Sono a Padova e lavoro volentieri su progetti che uniscono backend Python, frontend Angular e AI generativa. Scrivimi, o guarda il mio profilo.</p>
-        <a class="btn primary" href="mailto:scarabottolo72@gmail.com">Scrivimi una mail</a>
+        <h2 data-i18n="contact.h2">Got a problem that looks like a pile of documents?</h2>
+        <p data-i18n="contact.p">I'm based near Padova and enjoy working on projects that combine Python backends, Angular frontends and generative AI. Write to me, or check out my profile.</p>
+        <a class="btn primary" href="mailto:scarabottolo72@gmail.com" data-i18n="contact.btn">Send me an email</a>
       </div>
       <ul class="contact-list">
         <li><a href="mailto:scarabottolo72@gmail.com">scarabottolo72@gmail.com</a></li>
-        <li><a href="tel:+393496011226">+39 349 601 1226</a></li>
         <li><a href="https://www.linkedin.com/in/samuel-scarabottolo-a31269293/" target="_blank" rel="noopener">LinkedIn</a></li>
-        <li>Villafranca Padovana, Padova</li>
+        <li data-i18n="contact.location">Villafranca Padovana, Padova</li>
       </ul>
       <footer class="bottom" style="grid-column:1 / -1;">
         <span>Samuel Scarabottolo</span>
-        <span>Full Stack Developer</span>
+        <span data-i18n="footer.role">Full Stack Developer</span>
       </footer>
     </div>
   </section>
- 
+
 </main>
- 
+
 <script src="js/script.js" defer></script>
- 
+
 </body>
 </html>

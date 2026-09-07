@@ -1,3 +1,176 @@
+// ---------- language switcher ----------
+const translations = {
+  it: {
+    "meta.title": "Samuel Scarabottolo — Full Stack Developer",
+    skip: "Salta al contenuto",
+    "nav.menuAria": "Apri il menu",
+    "nav.about": "Chi sono",
+    "nav.experience": "Esperienza",
+    "nav.skills": "Competenze",
+    "nav.education": "Percorso",
+    "nav.contact": "Contattami",
+    "theme.cartaAria": "Tema Carta (chiaro)",
+    "theme.inchiostroAria": "Tema Inchiostro (scuro)",
+    "theme.pergamenaAria": "Tema Pergamena (seppia)",
+    "hero.h1":
+      "Costruisco assistenti che leggono i documenti pubblici al posto delle persone.",
+    "hero.lede":
+      "Full-stack developer con oltre due anni di esperienza: backend in Python e FastAPI, frontend in Angular, e sistemi RAG usati ogni giorno da enti pubblici italiani.",
+    "hero.btnProjects": "Guarda i progetti",
+    "hero.btnContact": "Scrivimi",
+    "hero.scroll": "Scorri per saperne di più",
+    "pipeline.aria":
+      "Diagramma: un documento viene estratto, indicizzato e trasformato in una risposta",
+    "pipeline.doc": "Documento",
+    "pipeline.extract": "Estrazione",
+    "pipeline.index": "Indice",
+    "pipeline.answer": "Risposta",
+    "about.eyebrow": "Presentazione",
+    "about.h2":
+      "Dal documento alla risposta, senza far perdere tempo a nessuno",
+    "about.p1":
+      "Sviluppo applicazioni web full-stack da oltre due anni, con <strong>backend in Python (FastAPI)</strong> e <strong>frontend in Angular</strong>. La maggior parte del mio lavoro riguarda assistenti virtuali basati su sistemi RAG per la pubblica amministrazione: mi occupo di estrazione, indicizzazione e recupero dei documenti che quegli assistenti usano per rispondere.",
+    "about.p2":
+      "Conosco anche Java e i fondamenti di progettazione delle API REST. Mi interessano in particolare l'AI generativa e la scrittura di codice pulito e manutenibile.",
+    "stamp.aria": "Attestato: Angular Certified Developer, giugno 2024",
+    "stamp.date": "Giugno 2024",
+    "stamp.caption":
+      'Angular Basic &amp; Angular Developer, conseguite durante il progetto IVA4PA. <a href="https://certificates.dev/angular/certificates/aeb66e9d-3460-4774-acb8-2bf7eb431d42" target="_blank" rel="noopener">Vedi il certificato</a>',
+    "exp.eyebrow": "Esperienza lavorativa",
+    "exp.h2": "Due anni, cinque tappe, un filo conduttore",
+    "exp.p":
+      "Sempre in Akera S.r.l., con una parentesi di tirocinio in Siav S.p.A. durante la tesi di laurea.",
+    "exp.status": "In corso",
+    "exp.item1.role": "Full Stack Developer — Appalti",
+    "exp.item1.company":
+      "Akera S.r.l · Progetto per il cliente Gruppo Maggioli",
+    "exp.item1.li1":
+      "<strong>Appalti (e-procurement):</strong> collaborazione sulla piattaforma di e-procurement del Gruppo Maggioli per gli appalti pubblici, lavorando all'interno del loro codebase Java/Maven con build ospitate su Google Cloud Artifact Registry.",
+    "exp.item2.role": "Full Stack Developer — NRC",
+    "exp.item2.company": "Akera S.r.l · Progetto per il Comune di Bologna",
+    "exp.item2.li1":
+      "<strong>MyIntranet, pubblica amministrazione:</strong> gestito l'onboarding di oltre 30 clienti comunali, risolto ticket di assistenza e sviluppato funzionalità personalizzate richieste da enti pubblici di vari comuni italiani.",
+    "exp.item2.li2":
+      "<strong>Versionamento e collaborazione:</strong> utilizzo di Git con feature branch, pull request e revisione del codice in un flusso di lavoro di team.",
+    "exp.item3.role": "Full Stack Developer — IVA4PA",
+    "exp.item3.company": "Akera S.r.l · Progetto per il Comune di Padova",
+    "exp.item3.li1":
+      "<strong>Virtual Assistant:</strong> chatbot RAG in produzione basato su documenti amministrativi, per ridurre le richieste manuali degli utenti.",
+    "exp.item3.li2":
+      "<strong>Pipeline di dati:</strong> estrazione automatizzata da Pentaho e crawling di oltre 50 portali comunali (MyPortal / Regione Veneto) con Scrapy e Selenium.",
+    "exp.item3.li3":
+      "<strong>API di indicizzazione:</strong> progettazione e deploy di API FastAPI per l'ingestione e il recupero dei documenti, con storage su bucket AWS S3.",
+    "exp.item3.li4":
+      "<strong>Front-end Angular:</strong> widget riutilizzabile per integrare l'assistente virtuale sui siti comunali di terze parti.",
+    "exp.item4.role": "Formazione aziendale",
+    "exp.item4.li1":
+      "Formazione iniziale sullo stack aziendale: <strong>Python, FastAPI, Angular, Spring Boot</strong>, workflow Git e fondamenti di metodologia Agile/SCRUM.",
+    "exp.item4.li2":
+      "Conseguite le certificazioni Angular Basic e Angular Developer.",
+    "exp.item5.role": "Assistant Research Engineer",
+    "exp.item5.company": "Siav S.p.A · Tirocinio tesi di laurea",
+    "exp.item5.li1":
+      "<strong>Localstore API:</strong> piattaforma di gestione della knowledge base per workflow di ricerca generativa.",
+    "exp.item5.li2":
+      "Autenticazione, gestione utenti, upload dei documenti, condivisione della knowledge base ed endpoint di interrogazione.",
+    "exp.item5.li3":
+      "<strong>Stack:</strong> Python, FastAPI (RESTful), SQLAlchemy ORM.",
+    "skills.eyebrow": "Competenze",
+    "skills.h2": "Gli strumenti che uso ogni giorno",
+    "skills.tabFrontend": "Frontend",
+    "skills.tabBackend": "Backend",
+    "skills.tabSystems": "Sistemi &amp; dati",
+    "skills.tabMethod": "Metodo",
+    "edu.eyebrow": "Formazione",
+    "edu.h2": "Percorso di studi",
+    "edu.item1.degree": "Laurea triennale in Informatica",
+    "edu.item2.degree": "Diploma in Informatica",
+    "langs.eyebrow": "Lingue",
+    "langs.native": "Madrelingua",
+    "cefr.listening": "Ascolto B2",
+    "cefr.reading": "Lettura B2",
+    "cefr.spokenInteraction": "Interazione orale B2",
+    "cefr.spokenProduction": "Produzione orale B2",
+    "cefr.writing": "Scrittura B2",
+    "contact.h2": "Hai un problema che assomiglia a un mucchio di documenti?",
+    "contact.p":
+      "Sono a Padova e lavoro volentieri su progetti che uniscono backend Python, frontend Angular e AI generativa. Scrivimi, o guarda il mio profilo.",
+    "contact.btn": "Scrivimi una mail",
+    "contact.location": "Villafranca Padovana, Padova",
+    "footer.role": "Full Stack Developer",
+  },
+};
+
+const langBtns = document.querySelectorAll(".lang-btn");
+const metaDescription = document.querySelector('meta[name="description"]');
+const originalDescription = metaDescription
+  ? metaDescription.getAttribute("content")
+  : "";
+const i18nEls = document.querySelectorAll("[data-i18n]");
+// for elements marked data-i18n-attr, only that ATTRIBUTE is translated (aria-label,
+// title...) and the element's real content (an svg diagram, an icon) is left untouched.
+// everything else gets its innerHTML swapped.
+const originalValue = new Map();
+i18nEls.forEach((el) => {
+  const attrOnly = el.getAttribute("data-i18n-attr");
+  originalValue.set(el, attrOnly ? el.getAttribute(attrOnly) : el.innerHTML);
+});
+const tabEls = document.querySelectorAll("[data-i18n-tab]");
+const originalTab = new Map();
+tabEls.forEach((el) => originalTab.set(el, el.getAttribute("data-tab")));
+
+function setLanguage(lang) {
+  document.documentElement.lang = lang;
+  langBtns.forEach((b) =>
+    b.setAttribute("aria-pressed", b.dataset.lang === lang ? "true" : "false"),
+  );
+
+  i18nEls.forEach((el) => {
+    const key = el.getAttribute("data-i18n");
+    const attrOnly = el.getAttribute("data-i18n-attr");
+    const value =
+      lang === "en"
+        ? originalValue.get(el)
+        : translations[lang] && translations[lang][key];
+    if (value === undefined) return;
+    if (attrOnly) {
+      el.setAttribute(attrOnly, value.replace(/&amp;/g, "&"));
+    } else {
+      el.innerHTML = value;
+    }
+  });
+
+  tabEls.forEach((el) => {
+    const key = el.getAttribute("data-i18n-tab");
+    if (lang === "en") {
+      el.setAttribute("data-tab", originalTab.get(el));
+    } else if (translations[lang] && translations[lang][key] !== undefined) {
+      el.setAttribute(
+        "data-tab",
+        translations[lang][key].replace(/&amp;/g, "&"),
+      );
+    }
+  });
+
+  const titleEl = document.querySelector("title");
+  if (titleEl) document.title = titleEl.textContent;
+
+  if (metaDescription) {
+    if (lang === "en") {
+      metaDescription.setAttribute("content", originalDescription);
+    } else {
+      metaDescription.setAttribute(
+        "content",
+        "Portfolio di Samuel Scarabottolo, full-stack developer specializzato in backend Python/FastAPI, frontend Angular e assistenti RAG per la pubblica amministrazione.",
+      );
+    }
+  }
+}
+
+langBtns.forEach((b) =>
+  b.addEventListener("click", () => setLanguage(b.dataset.lang)),
+);
+
 // ---------- theme switcher ----------
 const themeBtns = document.querySelectorAll(".theme-btn");
 const root = document.documentElement;

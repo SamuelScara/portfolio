@@ -245,6 +245,37 @@ nav a.active::after {
   color: var(--paper);
 }
 
+/* language switcher */
+.lang-switch {
+  display: flex;
+  border: 1px solid var(--line);
+  flex: none;
+}
+.lang-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: var(--sans);
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  color: var(--ink-soft);
+  padding: 0.35rem 0.6rem;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+.lang-btn + .lang-btn {
+  border-left: 1px solid var(--line);
+}
+.lang-btn[aria-pressed="true"] {
+  background: var(--ink);
+  color: var(--paper);
+}
+.lang-btn:hover:not([aria-pressed="true"]) {
+  color: var(--ink);
+}
+
 /* theme switcher */
 .theme-switch {
   display: flex;
@@ -318,6 +349,9 @@ nav a.active::after {
   }
   .menu-btn {
     display: block;
+  }
+  .lang-switch {
+    margin-top: 1.4rem;
   }
   .theme-switch {
     margin-top: 1rem;
